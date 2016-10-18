@@ -85,7 +85,7 @@ df6 <- data.frame(affinity=exp_data.myc$V2, featureVector.Myc2)
 # "cv" mean cross validation
 trainControl <- trainControl(method = "cv", number = 10, savePredictions = TRUE)
 
-# Prediction without L2-regularized
+# Prediction without L2-regularized (just as a trial)
 model <- train (affinity~., data = df1, trControl=trainControl, 
                 method = "lm", preProcess=NULL)
 summary(model)
